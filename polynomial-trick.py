@@ -1,5 +1,7 @@
 # Print instructions
-print("\nChoose a polynomial of any degree and choose positive integer coefficients for each power.")
+print(
+    "\nChoose a polynomial of any degree and choose positive integer coefficients for each power."
+)
 print("Positive integer coefficients could be any integer greater than or equal to 0.")
 print("When prompted, enter the calculated values for your polynomial.")
 print("This program will determine what your original polynomial was.\n")
@@ -20,8 +22,8 @@ while ff1 > (base ** (degree + 1)):
 # f(f(1) + 1) -= int * (f(1) + 1) ** # - 1 -> remainder
 equation = "f(x) = "
 for deg in reversed(range(0, degree + 1)):
-    coef = total // base ** deg
-    total -= coef * base ** deg
+    coef = total // base**deg
+    total -= coef * base**deg
     if deg > 1:
         equation += f"{coef}x^{deg} + "
     elif deg > 0:
